@@ -1,0 +1,13 @@
+version: '2.2'
+
+services:
+  kafka:
+    environment:
+      ADVERTISED_HOST: localhost
+      ADVERTISED_PORT: 9092
+      AUTO_CREATE_TOPICS: true
+    restart: always
+    container_name: kafka
+    build: ./kafka
+    ports:
+      - "9092:9092"
